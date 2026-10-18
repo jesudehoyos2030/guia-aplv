@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guía para Madres Lactantes - APLV</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  /* Navegación */
+  nav {
+    background-color: #2c6cb1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 58px;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    font-size: 0.95rem;
+  }
+
+  .nav-links a:last-child {
+    border-right: none;
+  }
+
+  .nav-links a:hover, .nav-links a:focus {
+    background-color: #1c4c80;
+  }
+
+  /* Botón hamburguesa */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 3px;
+  }
+
+  /* Main y secciones */
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+
+  h2 {
+    color: #1a447b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 0.3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  ul, ol {
+    margin-left: 1.5rem;
+    margin-top: 0.8rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .important {
+    background: #ffe8e8;
+    border-left: 5px solid #d9534f;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  footer {
+    background: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+  }
+
+  /* Botón subir */
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+
+  #topBtn:hover {
+    background-color: #1c4c80;
+  }
+
+  /* Responsive */
+  @media(max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    .nav-links.open {
+      max-height: 500px;
+    }
+
+    .nav-links a {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .nav-links a:last-child {
+      border-bottom: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Guía para Madres Lactantes con Bebés con APLV</h1>
+  <p>Apoyo integral para la alimentación, salud y bienestar materno-infantil</p>
+</header>
+
+<nav role="navigation" aria-label="Menú principal">
+  <div class="hamburger" aria-label="Abrir menú" aria-expanded="false" role="button" tabindex="0">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <div class="nav-links">
+    <a href="#proposito">Propósito</a>
+    <a href="#lactancia">Importancia Lactancia</a>
+    <a href="#introduccion-aplv">Introducción APLV</a>
+    <a href="#fisiopatologia">Fisiopatología</a>
+    <a href="#como-actuar">¿Cómo Actuar?</a>
+    <a href="#nutricion">Nutrición y Suplementación</a>
+    <a href="#recetas">Recetario</a>
+    <a href="#faq">Preguntas Frecuentes</a>
+    <a href="#mensaje">Mensaje Mamás</a>
+    <a href="#contacto">Agradecimientos</a>
+  </div>
+</nav>
+
+<main>
+  <section id="proposito" tabindex="0">
+    <h2>Propósito de la Guía</h2>
+    <p>Esta guía acompaña y orienta a madres lactantes cuyos bebés tienen diagnóstico o sospecha de <strong>APLV</strong>. Busca promover la lactancia materna segura y saludable, apoyando a la madre en la adaptación de su alimentación y fortaleciendo el bienestar emocional durante este proceso.</p>
+  </section>
+
+  <section id="lactancia" tabindex="0">
+    <h2>Importancia de la Lactancia Materna</h2>
+    <ul>
+      <li><strong>Defensa inmunológica:</strong> anticuerpos y proteínas protectoras que reducen enfermedades.</li>
+      <li><strong>Salud intestinal:</strong> apoyo a la microbiota que fortalece el sistema inmunológico.</li>
+      <li><strong>Protección vital:</strong> menor riesgo de muerte súbita, diarrea y otras enfermedades.</li>
+      <li><strong>Desarrollo cerebral:</strong> apoyo cognitivo y afectivo mediante el contacto piel a piel.</li>
+      <li><strong>Salud a largo plazo:</strong> menor riesgo de obesidad, diabetes y problemas dentales.</li>
+      <li><strong>Beneficios para la madre:</strong> reducción del riesgo de cáncer y otras enfermedades.</li>
+    </ul>
+  </section>
+
+  <section id="introduccion-aplv" tabindex="0">
+    <h2>Introducción a la APLV</h2>
+    <p>La alergia a la proteína de la leche de vaca (APLV) es frecuente en el primer año de vida y puede confundirse con otras condiciones. El bebé puede ser alérgico incluso si sólo recibe leche materna, debido a la transferencia indirecta de proteínas cuando la madre consume lácteos.</p>
+    <p>La intervención principal es una dieta de exclusión de lácteos para la madre, siempre bajo supervisión médica y nutricional.</p>
+  </section>
+
+  <section id="fisiopatologia" tabindex="0">
+    <h2>Fisiopatología</h2>
+    <p>El sistema inmunológico del bebé actúa como una alarma que detecta proteínas desconocidas. En APLV, identifica las proteínas de la leche como amenaza y genera reacciones que pueden ser inmediatas (IgE mediadas) o tardías (no IgE), causando diversos síntomas.</p>
+  </section>
+
+  <section id="como-actuar" tabindex="0">
+    <h2>¿Cómo actuar si mi bebé tiene alergia?</h2>
+    <ol>
+      <li>No interrumpir la lactancia materna.</li>
+      <li>Si el médico lo indica, eliminar lácteos y derivados de la dieta materna por 2 a 4 semanas.</li>
+      <li>Observar la respuesta del bebé para confirmar la alergia.</li>
+      <li>Reintroducir los lácteos bajo supervisión para verificar si los síntomas regresan.</li>
+      <li>Realizar todo con acompañamiento profesional en pediatría y nutrición.</li>
+    </ol>
+    <p><strong>Importante:</strong> No eliminar lácteos sin diagnóstico y acompañamiento adecuado.</p>
+  </section>
+
+  <section id="nutricion" tabindex="0">
+    <h2>Nutrición y Suplementación</h2>
+    <h3>¿Qué pasa si dejo los lácteos?</h3>
+    <p>La leche y derivados aportan calcio, vitaminas D, A y B12 importantes durante la lactancia. La eliminación sin plan puede generar deficiencias, por lo que se recomienda suplementar y sustituir con alimentos ricos en estos nutrientes.</p>
+    <h3>Recomendaciones generales</h3>
+    <ul>
+      <li>Consumir frutas variadas y alimentos ricos en calcio y vitamina D.</li>
+      <li>Suplementar calcio y vitamina D según indicaciones médicas.</li>
+      <li>Evitar contaminación cruzada y leer etiquetas para excluir derivados de leche.</li>
+      <li>Usar bebidas vegetales enriquecidas como sustituto de la leche.</li>
+    </ul>
+    <h3>Alimentos ricos en vitamina D</h3>
+    <ul>
+      <li>Pescados como trucha, salmón, atún en lata y sardinas.</li>
+      <li>Huevos (especialmente yemas).</li>
+      <li>Bebidas vegetales fortificadas y aceites como el de hígado de bacalao.</li>
+    </ul>
+    <h3>Alimentos ricos en calcio</h3>
+    <ul>
+      <li>Sésamo, sardinas en lata con espinas, almendras, col rizada, tofu con sulfato de calcio.</li>
+      <li>Legumbres como frijoles blancos y garbanzos.</li>
+      <li>Frutas como guayaba, naranja, tamarindo y brevas.</li>
+    </ul>
+  </section>
+
+  <section id="recetas" tabindex="0">
+    <h2>Recetario Libre de Lácteos</h2>
+
+    <h3>Pasta con champiñones y tofu</h3>
+    <p><strong>Ingredientes:</strong> pasta, champiñones, tofu, cebolla, ajo, ajonjolí.</p>
+    <p><strong>Preparación:</strong> Saltear cebolla y ajo, dorar tofu, licuar con agua y condimentos, mezclar con pasta y champiñones salteados, agregar ajonjolí.</p>
+
+    <h3>Croquetas de sardina</h3>
+    <p><strong>Ingredientes:</strong> sardinas, cebolla, tomate, huevo, cilantro, harina.</p>
+    <p><strong>Preparación:</strong> Mezclar sardinas con guiso de cebolla y tomate, huevo y harina, formar tortas y freír.</p>
+
+    <h3>Arepa tipo reina pepiada</h3>
+    <p><strong>Ingredientes:</strong> quinoa, harina pan, pechuga de pollo, aguacate, cebolla, zanahoria.</p>
+    <p><strong>Preparación:</strong> Cocinar pollo y preparar guacamole, mezclar harina con quinoa y zanahoria, formar arepas y asar, rellenar con mezcla de pollo y aguacate.</p>
+
+    <p><em>Y muchas otras recetas adaptadas y económicas para ti.</em></p>
+  </section>
+
+  <section id="faq" tabindex="0">
+    <h2>Preguntas Frecuentes</h2>
+
+    <p><strong>¿Puedo seguir amamantando si mi bebé tiene APLV?</strong> Sí, la lactancia materna es la mejor opción y debe mantenerse con dieta adecuada para ti.</p>
+
+    <p><strong>¿Cuándo debo eliminar los lácteos?</strong> Solo si el médico lo indica tras evaluación y diagnóstico.</p>
+
+    <p><strong>¿Qué suplementos debo tomar?</strong> Calcio y vitamina D son clave, siempre bajo supervisión profesional.</p>
+
+    <p><strong>¿Puedo consumir productos con etiquetas “puede contener leche”?</strong> Depende de la severidad de la alergia, consulta con tu especialista. Evita si hay dudas.</p>
+  </section>
+
+  <section id="mensaje" tabindex="0">
+    <h2>Mensaje para las Mamás</h2>
+    <p>Sabemos que esta etapa puede ser exigente y llena de emociones. No estás sola, y tu esfuerzo es un acto enorme de amor. Aprende a tu ritmo, pide ayuda y valora cada paso que das por tu bebé y por ti.</p>
+  </section>
+
+  <section id="contacto" tabindex="0">
+    <h2>Agradecimientos y Referencias</h2>
+    <p>Gracias a la nutricionista Katherine Henao y los profesionales que respaldaron esta guía.</p>
+
+    <h3>Referencias científicas principales:</h3>
+    <ul>
+      <li>Vandenplas et al., Journal of Pediatric Gastroenterology and Nutrition, 2024.</li>
+      <li>Meyer et al., World Allergy Organ J, 2023.</li>
+      <li>Santos et al., Allergy, 2025.</li>
+      <li>Bagés et al., Revista Colombiana de Gastroenterología, 2020.</li>
+      <li>McWilliam et al., World Allergy Organ J, 2023.</li>
+    </ul>
+
+    <p class="important">Esta guía es educativa. Consulta siempre a tu pediatra y nutricionista. Si tu bebé presenta síntomas graves, busca atención médica urgente.</p>
+  </section>
+</main>
+
+<button id="topBtn" aria-label="Subir al inicio">⬆</button>
+
+<footer>
+  <p>© 2026 Guía APLV - Todos los derechos reservados</p>
+</footer>
+
+<script>
+  // Toggle menú hamburguesa
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    // Actualiza accesibilidad
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+
+  hamburger.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      hamburger.click();
+    }
+  });
+
+  // Botón subir al inicio
+  const topBtn = document.getElementById('topBtn');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = 'block';
+    } else {
+      topBtn.style.display = 'none';
+    }
+  };
+
+  topBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+</script>
+
+</body>
+</html>
